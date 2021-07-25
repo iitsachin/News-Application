@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsDetailActivity"
+    android:background="@color/black_shade_1">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_shade_1"
+        app:title="Around The Globe"
+        android:id="@+id/toolbar"
+        app:titleTextColor="@color/yellow"
+        android:gravity="center"
+        android:textAlignment="center"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:id="@+id/IVNews"
+                android:layout_margin="3dp"
+                android:padding="3dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:id="@+id/TVTitle"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="@color/yellow"
+                android:layout_below="@+id/IVNews"
+                android:padding="4dp"
+                android:layout_margin="4dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TVSubTitle"
+                android:layout_below="@+id/TVTitle"
+                android:text="SubTitle"
+                android:textColor="@color/white"
+                android:padding="4dp"
+                android:layout_margin="4dp"
+            />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TVContent"
+                android:layout_below="@+id/TVSubTitle"
+                android:text="Content"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:textColor="@color/white"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/BtnRead"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/yellow"
+        android:backgroundTint="@color/yellow"
+        android:text="Read Full News"
+        android:textAllCaps="false"
+        />
+
+
+</RelativeLayout>
